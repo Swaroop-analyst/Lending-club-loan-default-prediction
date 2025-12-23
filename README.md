@@ -1,26 +1,60 @@
-# 📊 Lending Club Loan Default Prediction
+# Lending Club Loan Default Prediction
 
-## CRISP-DM Project Documentation
+## 1. Business Understanding
+This project aims to build a machine learning model that predicts the probability of loan default for Lending Club customers. 
+Accurate default prediction enables financial institutions to reduce credit risk, optimize approval decisions, and improve portfolio profitability.
 
-### 1. Business Understanding
-Predict loan default to reduce financial risk and improve lending decisions.
+## 2. Data Understanding
+The dataset contains historical loan applications with borrower demographics, loan attributes, and credit history information.
+Target variable: loan_status (converted to binary: Default vs Fully Paid).
 
-### 2. Data Understanding
-Dataset: Lending Club historical loan data
-Target: loan_status (Default vs Fully Paid)
+Key feature groups:
+- Borrower Profile: income, employment length, home ownership
+- Loan Details: loan amount, interest rate, term
+- Credit History: debt-to-income, delinquencies, revolving utilization, open accounts
 
-### 3. Data Preparation
-Cleaning, encoding, feature engineering, class balancing using SMOTE.
+Exploratory analysis identified strong relationships between default risk and interest rate, DTI, credit utilization, and income.
 
-### 4. Modeling
-Logistic Regression, Random Forest, XGBoost, LightGBM.
-Best Model: LightGBM.
+## 3. Data Preparation
+- Removed leakage and irrelevant columns
+- Imputed missing values using median/mode strategy
+- Encoded categorical features with one-hot encoding
+- Engineered new features such as credit utilization ratio and income-to-loan ratio
+- Addressed class imbalance using resampling techniques
+- Final dataset standardized and split into training and test sets
 
-### 5. Evaluation
-High ROC-AUC (~0.90+), strong recall for default class.
+## 4. Modeling
+Models trained:
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+- XGBoost / LightGBM
 
-### 6. Deployment
-Real-time loan risk scoring and portfolio monitoring.
+Hyperparameter tuning performed using cross-validation.
+Final model selected based on ROC-AUC and recall for default class.
 
-### Conclusion
-End-to-end production-ready credit risk modeling project.
+## 5. Evaluation
+Evaluation metrics:
+- Accuracy
+- Precision, Recall, F1-score
+- ROC-AUC
+- Confusion Matrix
+
+Model achieved strong discrimination between default and non-default customers.
+Feature importance analysis highlighted interest rate, DTI, credit utilization, income, and loan amount as top drivers.
+
+## 6. Business Impact & Deployment
+The model can be integrated into loan approval pipelines for:
+- Automated risk scoring
+- Risk-based pricing
+- Portfolio risk monitoring
+
+Expected benefits:
+- Reduced default losses
+- Faster decision cycles
+- Improved capital efficiency
+
+## 7. Conclusion
+This project demonstrates a full CRISP-DM lifecycle and delivers a production-ready credit risk prediction system.
+
+Author: Swaroop Narayan

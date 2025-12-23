@@ -90,6 +90,15 @@ Expected benefits:
 - Faster decision cycles
 - Improved capital efficiency
 
+🛠️ **Technologies Used
+**
+- Python
+- Pandas, NumPy
+- Scikit-Learn
+- XGBoost, LightGBM
+- Matplotlib, Seaborn
+- Jupyter Notebook
+
 ## 7. Conclusion
 This project demonstrates a full CRISP-DM lifecycle and delivers a production-ready credit risk prediction system.
 

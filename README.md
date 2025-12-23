@@ -4,9 +4,35 @@
 This project aims to build a machine learning model that predicts the probability of loan default for Lending Club customers. 
 Accurate default prediction enables financial institutions to reduce credit risk, optimize approval decisions, and improve portfolio profitability.
 
+## Business Problem
+
+Financial institutions face significant risk from loan defaults. The goal of this project is to predict whether a borrower will default on a loan using historical Lending Club data, enabling better credit risk assessment and improved lending decisions.
+
+## Business Objectives
+
+- Reduce financial loss from bad loans
+- Improve approval quality
+- Optimize risk-based pricing
+
+## Success Criteria
+
+- Achieve strong predictive performance (AUC, Accuracy, F1)
+- Provide interpretable insights for decision-makers
+
 ## 2. Data Understanding
 The dataset contains historical loan applications with borrower demographics, loan attributes, and credit history information.
 Target variable: loan_status (converted to binary: Default vs Fully Paid).
+
+Dataset
+- Source: Lending Club Loan Data
+- Size: ~100K+ records, 150+ features
+
+Target Variable
+
+loan_status (Transformed into binary classification:)
+
+1 = Default / Charged Off
+0 = Fully Paid
 
 Key feature groups:
 - Borrower Profile: income, employment length, home ownership
@@ -43,6 +69,16 @@ Evaluation metrics:
 Model achieved strong discrimination between default and non-default customers.
 Feature importance analysis highlighted interest rate, DTI, credit utilization, income, and loan amount as top drivers.
 
+📊 Model Performance Comparison
+
+<img width="906" height="509" alt="image" src="https://github.com/user-attachments/assets/0f7a5a6e-57e6-4b6f-bded-2e6ddb938688" />
+
+Best Model
+
+- LightGBM
+- Highest ROC-AUC
+- Best balance between precision & recall
+
 ## 6. Business Impact & Deployment
 The model can be integrated into loan approval pipelines for:
 - Automated risk scoring
@@ -57,4 +93,3 @@ Expected benefits:
 ## 7. Conclusion
 This project demonstrates a full CRISP-DM lifecycle and delivers a production-ready credit risk prediction system.
 
-Author: Swaroop Narayan

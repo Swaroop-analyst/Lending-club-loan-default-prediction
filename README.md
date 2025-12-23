@@ -90,8 +90,7 @@ Expected benefits:
 - Faster decision cycles
 - Improved capital efficiency
 
-🛠️ **Technologies Used
-**
+🛠️ ## Technologies Used 
 - Python
 - Pandas, NumPy
 - Scikit-Learn
